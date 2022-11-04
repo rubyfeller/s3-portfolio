@@ -14,7 +14,7 @@ Er is gekozen voor Spring Boot omdat het er voor zorgt dat je geen server nodig 
 **Insert component en code diagram**
 
 #### C4: context diagram
-![images/C4 Model System Context Diagram.png](images/C4 Model System Context Diagram.png)
+![img.png](images/C4 Model System Context Diagram.png)
 
 #### C4: container diagram
 ![img.png](images/C4%20Model%20Container%20Diagram.png)
@@ -39,14 +39,15 @@ Zo kan er eerst een pull request gemaakt worden voordat de wijzigingen toegepast
 Voor het bewaken van de kwaliteit van de software heb ik gebruik gemaakt van SonarCloud. Deze tool maakt scans van de code, en laat op basis hiervan zien of er verbeteringen mogelijk zijn, of dat er bugs of kwetsbaarheden in de code zitten.
 
 ![img.png](images/SonarCloud GH Action.png)
-![img_1.png](images/SonarCloud code scan.png)
+![img.png](images/SonarCloud code scan.png)
 
 ## Agile
 In de proftaak is gebruik gemaakt van de agile werkmethode SCRUM. Hierbij hebben we als groep daily standups gehouden, 5 sprint opleveringen gehad en een aantal refinment sessies met de product owners gehad. Hierbij is gebruik gemaakt van Azure DevOps om de voorgang bij te houden en te communiceren.
 Ook is er een burndownchart gemaakt.
 
 Voor de retrospective hebben we gebruik gemaakt van de [4ls](https://www.atlassian.com/team-playbook/plays/4-ls-retrospective-technique) methode:
-![img_2.png](images/Retrospective GP.png)
+
+![img.png](images/Retrospective GP.png)
 
 **Insert screenshot board/burndown**
 
@@ -83,7 +84,7 @@ In het groepsproject heb ik gebruik gemaakt van Azure Pipelines, waar een Docker
 Voor het opstellen van requirements heb ik gebruik gemaakt van user stories in combinatie met acceptatiecriteria / definition of done.
 Deze zijn per sprint bijgehouden in Jira:
 
-![img_3.png](images/Jira board.png)
+![img.png](images/Jira board.png)
 
 **Insert screenshot**
 
@@ -94,6 +95,7 @@ Deze zijn per sprint bijgehouden in Jira:
 **Insert FeedPulse screenshot / export**
 
 In het groepsproject hebben we elkaar aan het einde van de sprint peer feedback gegeven:
+
 ![img.png](images/Peer feedback.png)
 
 ## Reflectie
