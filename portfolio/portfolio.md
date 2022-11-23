@@ -55,6 +55,17 @@ Tot slot heb ik onderzoek gedaan naar hoe de kwaliteit in een gedistribueerde we
 
 [Onderzoek testen
 ](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/research/Onderzoek%20testen.docx)
+
+Aan de hand van dit onderzoek heb ik mijn applicatie getest. Aangezien het in een gedistribueerde webapplicatie belangrijk is dat diverse modules/onderdelen met elkaar kunnen praten, heb ik gekozen voor integratietests.
+
+Deze heb ik toegepast met gebruik van Spring Boot Test, JUnit en TestContainers. TestContainers zorg voor een Docker image, met daarop de database.
+Hiervoor heb ik gekozen omdat het mocken van de data minder waardevol is, en de daadwerkelijke database gebruiken de database onnodig vult. 
+In de TestContainer word dezelfde versie van MySQL gedraait als in de daadwerkelijke applicatie, zodat eventuele fouten met betrekking tot MySQL ook aan het licht komen.
+In onderstaande afbeelding is 1 van de integratietests zichtbaar:
+
+![img.png](images/IntegrationTestService.png)
+Ik test hier of de assignnment word toegevoegd, of de velden correct zijn, en of deze correct in de database komt.
+
 ## Agile
 In de proftaak is gebruik gemaakt van de agile werkmethode SCRUM. Hierbij hebben we als groep daily standups gehouden, 5 sprint opleveringen gehad en een aantal refinment sessies met de product owners gehad. Hierbij is gebruik gemaakt van Azure DevOps om de voorgang bij te houden en te communiceren.
 Ook is er een burndownchart gemaakt.
