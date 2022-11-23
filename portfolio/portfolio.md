@@ -19,7 +19,7 @@ De applicatie die ik gemaakt heb is een platform / marktplaats voor mensen om kl
 Een ondernemer kan deze klus vervolgens inzien en ook oppakken om uit te voeren. Hierbij kan de ondernemer een prijs en datum aanbieden.
 De gebruiker die een ondernemer zoekt om de klus uit te voeren, kan in zijn account zijn aangemaakte klussen inzien.
 
-To do: **insert component en code diagram**
+To do: **componentdiagram, code diagram en stukje over UI**
 
 #### C4: context diagram
 ![img.png](images/C4%20Model%20System%20Context%20Diagram.png)
@@ -81,7 +81,7 @@ Vaak is er in deze methode ook sprake van een contract welke van tevoren geteken
 
 In onderstaande afbeelding is te zien hoe de SDLC in de waterval-methode eruit ziet:
 
-![](images/Software Development Life Cycle.png)
+![img.png](images/Software%20Development%20Life%20Cycle.png)
 
 Iedere stap die is weergegeven: analyse, design, implementatie, testen en evaluatie worden los van elkaar uitgevoerd. De volgende stap kan niet starten voordat de voorgaande afgerond en gereviewd is.
 Er word dus bijvoorbeeld niet zoals bij Scrum iedere sprint getest, maar pas als alle voorgaande processen zijn afgerond (analyse tot en met implementatie).
