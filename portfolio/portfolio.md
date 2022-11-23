@@ -2,6 +2,7 @@
 In dit portfolio licht ik mijn werk per leerdoel toe. Het gaat hierbij om zowel de IP-leerdoelen als GP-leerdoelen.
 
 ## Webapplicatie
+
 **Front-end**
 
 Voor de front-end word gebruik gemaakt van React. Aangezien React het meest gebruikte Javascript framework is en er veel ondersteuning en informatie over is te vinden.
@@ -14,7 +15,11 @@ Er is gekozen voor Spring Boot omdat het er voor zorgt dat je geen server nodig 
 
 Omdat Java onder de knie te krijgen heb ik eerst een [cursus](https://www.codecademy.com/learn/learn-java) op CodeCademy gevolgd. Dit hielp om de verschillen tussen C# en Java te leren.
 
-**Insert component en code diagram**
+De applicatie die ik gemaakt heb is een platform / marktplaats voor mensen om klussen op te plaatsen.
+Een ondernemer kan deze klus vervolgens inzien en ook oppakken om uit te voeren. Hierbij kan de ondernemer een prijs en datum aanbieden.
+De gebruiker die een ondernemer zoekt om de klus uit te voeren, kan in zijn account zijn aangemaakte klussen inzien.
+
+To do: **insert component en code diagram**
 
 #### C4: context diagram
 ![img.png](images/C4%20Model%20System%20Context%20Diagram.png)
@@ -42,12 +47,14 @@ Zo kan er eerst een pull request gemaakt worden voordat de wijzigingen toegepast
 Voor het bewaken van de kwaliteit van de software heb ik gebruik gemaakt van SonarCloud. Deze tool maakt scans van de code, en laat op basis hiervan zien of er verbeteringen mogelijk zijn, of dat er bugs of kwetsbaarheden in de code zitten.
 
 ![img.png](images/SonarCloud%20GH%20Action.png)
-![img.png](images/SonarCloud%20code%20scan.png)
+![img.png](images/SonarCloud%20code%20scan%202.png)
+
+To do: **toevoegen wat gedaan is met de code smells / security notices.**
 
 Tot slot heb ik onderzoek gedaan naar hoe de kwaliteit in een gedistribueerde webapplicatie gewaarborgd kan worden middels testen.
 
 [Onderzoek testen
-](research/Onderzoek testen.docx)
+](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/research/Onderzoek%20testen.docx)
 ## Agile
 In de proftaak is gebruik gemaakt van de agile werkmethode SCRUM. Hierbij hebben we als groep daily standups gehouden, 5 sprint opleveringen gehad en een aantal refinment sessies met de product owners gehad. Hierbij is gebruik gemaakt van Azure DevOps om de voorgang bij te houden en te communiceren.
 Ook is er een burndownchart gemaakt.
@@ -81,7 +88,9 @@ Er word dus bijvoorbeeld niet zoals bij Scrum iedere sprint getest, maar pas als
 
 Dit ontwikkelproces word voornamelijk gebruikt als er weinig veranderingen verwacht worden.
 
-**Insert screenshot board/burndown**
+![img.png](images/AzureDevOpsBoard.png)
+
+To do: **Insert screenshot burndown chart**
 
 ## CI/CD
 Aan de repositories op GitHub heb ik 'Github Actions' toegevoegd: een tool om CI/CD toe te passen.
@@ -118,19 +127,17 @@ In onderstaande afbeelding is de architectuurdiagram van het groepsproject te zi
 Voor het opstellen van requirements heb ik gebruik gemaakt van user stories in combinatie met acceptatiecriteria / definition of done.
 Deze zijn per sprint bijgehouden in Jira:
 
-![img.png](images/Jira%20board.png)
-
-**Insert screenshot**
+![img.png](images/Jira%20board%202.png)
 
 ## Business processes
 
 ## Professional
 
-**Insert FeedPulse screenshot / export**
+To do: **Insert FeedPulse screenshot / export**
 
 In het groepsproject hebben we elkaar aan het einde van de sprint peer feedback gegeven:
 
 ![img.png](images/Peer%20feedback.png)
 
 ## Reflectie
-Reflectie op dit semester.
+To do: **reflectie op dit semester.**
