@@ -19,7 +19,7 @@ De applicatie die ik gemaakt heb is een platform / marktplaats voor mensen om kl
 Een ondernemer kan deze klus vervolgens inzien en ook oppakken om uit te voeren. Hierbij kan de ondernemer een prijs en datum aanbieden.
 De gebruiker die een ondernemer zoekt om de klus uit te voeren, kan in zijn account zijn aangemaakte klussen inzien.
 
-To do: **componentdiagram, code diagram en stukje over UI**
+To do: **componentdiagram, code diagram en stukje over UI, API-documentatie aan de hand van Postman of Swagger.**
 
 #### C4: context diagram
 ![img.png](images/C4%20Model%20System%20Context%20Diagram.png)
@@ -47,24 +47,31 @@ Zo kan er eerst een pull request gemaakt worden voordat de wijzigingen toegepast
 Voor het bewaken van de kwaliteit van de software heb ik gebruik gemaakt van SonarCloud. Deze tool maakt scans van de code, en laat op basis hiervan zien of er verbeteringen mogelijk zijn, of dat er bugs of kwetsbaarheden in de code zitten.
 
 ![img.png](images/SonarCloud%20GH%20Action.png)
-![img.png](images/SonarCloud%20code%20scan%202.png)
+![img.png](images/SonarCloud%20code%20scan%203.png)
 
 To do: **toevoegen wat gedaan is met de code smells / security notices.**
+
+To do: **stukje toevoegen over onderzoek naar veiligheid JWT-tokens**
 
 Tot slot heb ik onderzoek gedaan naar hoe de kwaliteit in een gedistribueerde webapplicatie gewaarborgd kan worden middels testen.
 
 [Onderzoek testen
 ](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/research/Onderzoek%20testen.docx)
 
-Aan de hand van dit onderzoek heb ik mijn applicatie getest. Aangezien het in een gedistribueerde webapplicatie belangrijk is dat diverse modules/onderdelen met elkaar kunnen praten, heb ik gekozen voor integratietests.
+Aan de hand van dit onderzoek heb ik mijn applicatie getest. Aangezien het in een gedistribueerde webapplicatie belangrijk is dat diverse modules/onderdelen met elkaar kunnen communiceren, heb ik gekozen voor integratietests.
+Om te valideren dat de applicatie voldoet aan de eisen heb ik tevens gebruik gemaakt van acceptatietests, in de vorm van endpointtests.
 
-Deze heb ik toegepast met gebruik van Spring Boot Test, JUnit en TestContainers. TestContainers zorg voor een Docker image, met daarop de database.
+Deze tests heb ik toegepast met gebruik van Spring Boot Test, JUnit en TestContainers. TestContainers zorg voor een Docker image, met daarop de database.
 Hiervoor heb ik gekozen omdat het mocken van de data minder waardevol is, en de daadwerkelijke database gebruiken de database onnodig vult. 
-In de TestContainer word dezelfde versie van MySQL gedraait als in de daadwerkelijke applicatie, zodat eventuele fouten met betrekking tot MySQL ook aan het licht komen.
+In de TestContainer wordt dezelfde versie van MySQL gedraait als in de daadwerkelijke applicatie, zodat eventuele fouten met betrekking tot MySQL ook aan het licht komen.
 In onderstaande afbeelding is 1 van de integratietests zichtbaar:
 
 ![img.png](images/IntegrationTestService.png)
 Ik test hier of de assignnment word toegevoegd, of de velden correct zijn, en of deze correct in de database komt.
+
+In onderstaande afbeelding is een voorbeeld van een acceptatietest te zien. Hierbij word de controller getest, voornamelijk om te controleren of het resultaat en de HTTP statuscode uit het endpoint correct is:
+
+![img.png](images/AcceptanceTestController.png)
 
 ## Agile
 In de proftaak is gebruik gemaakt van de agile werkmethode SCRUM. Hierbij hebben we als groep daily standups gehouden, 5 sprint opleveringen gehad en een aantal refinment sessies met de product owners gehad. Hierbij is gebruik gemaakt van Azure DevOps om de voorgang bij te houden en te communiceren.
@@ -130,6 +137,7 @@ Daarnaast word SonarCloud getriggered om een code scan te maken. Op basis hierva
 
 In het groepsproject heb ik gebruik gemaakt van Azure Pipelines, waar een Docker image gemaakt en gepushet word naar AWS ECR. Vanuit daar word een ECS instance aangemaakt, welke ervoor zorgt dat de applicatie draait op een EC2 server.
 In onderstaande afbeelding is de architectuurdiagram van het groepsproject te zien, met daarin het CI/CD proces:
+
 ![img.jpg](images/Architectuurdiagram%20GP.jpg)
 
 ## Cultural differences and ethics
