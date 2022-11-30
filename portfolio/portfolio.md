@@ -67,7 +67,8 @@ In de TestContainer wordt dezelfde versie van MySQL gedraait als in de daadwerke
 In onderstaande afbeelding is 1 van de integratietests zichtbaar:
 
 ![img.png](images/IntegrationTestService.png)
-Ik test hier of de assignnment word toegevoegd, of de velden correct zijn, en of deze correct in de database komt.
+
+Ik test hier of de assignment wordt toegevoegd, of de velden correct zijn, en of deze correct in de database komt.
 
 In onderstaande afbeelding is een voorbeeld van een acceptatietest te zien. Hierbij word de controller getest, voornamelijk om te controleren of het resultaat en de HTTP statuscode uit het endpoint correct is:
 
