@@ -16,17 +16,19 @@ Er is gekozen voor Spring Boot omdat het er voor zorgt dat je geen server nodig 
 
 Om Java onder de knie te krijgen heb ik eerst een [cursus](https://www.codecademy.com/learn/learn-java) op CodeCademy gevolgd. Dit hielp om de verschillen tussen C# en Java te leren.
 
-De applicatie die ik gemaakt heb is een platform / marktplaats voor mensen om klussen op te plaatsen.
+De applicatie die ik gemaakt heb, is een platform / marktplaats voor mensen om klussen op te plaatsen.
 Een ondernemer kan deze klus vervolgens inzien en ook oppakken om uit te voeren. Hierbij kan de ondernemer een prijs en datum aanbieden.
 De gebruiker die een ondernemer zoekt om de klus uit te voeren, kan in zijn account zijn aangemaakte klussen inzien.
 
-To do: **componentdiagram, code diagram en stukje over UI, API-documentatie aan de hand van Postman of Swagger.**
+To do: **meerdere actors toevoegen, componentdiagram, code diagram en stukje over UI, front-end testen, API-documentatie aan de hand van Postman of Swagger.**
 
 #### C4: context diagram
-![img.png](images/C4%20Model%20System%20Context%20Diagram.png)
+![img.png](images/C4ModelSystemContextDiagram2.png)
+
+Uit feedback bleek dat de API (grijs blok), niet gezien kan worden als extern systeem omdat het bij de applicatie hoort. Dit maakt de contextdiagram minder relevant. Ik heb hem toch laten staan omdat ik er wel wat van geleerd heb. 
 
 #### C4: container diagram
-![img.png](images/C4%20Model%20Container%20Diagram.png)
+![img.png](images/C4ModelContainerDiagram2.png)
 
 [Front-end repository
 ](https://github.com/rubyfeller/s3-ip-frontend)
@@ -54,7 +56,8 @@ To do: **toevoegen wat gedaan is met de code smells / security notices.**
 
 To do: **stukje toevoegen over onderzoek naar veiligheid JWT-tokens**
 
-Tot slot heb ik onderzoek gedaan naar hoe de kwaliteit in een gedistribueerde webapplicatie gewaarborgd kan worden middels testen.
+#### Onderzoek 1
+Tot slot heb ik onderzoek gedaan naar hoe de kwaliteit in een gedistribueerde webapplicatie gewaarborgd kan worden middels testen. Hiervoor heb ik gebruik gemaakt van het [DOT-framework](https://ictresearchmethods.nl/The_DOT_Framework).
 
 [Onderzoek testen
 ](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/research/Onderzoek%20testen.docx)
@@ -82,7 +85,7 @@ Het doel is om flexibel om te gaan met feedback: iedere iteratie kunnen klanten 
 
 ### Agile Manifesto
 
-Het Agile Manifesto is een reeks van principes voor het ontwikkelen van software. Het manifest is opgesteld door een groep softwareontwikkelaars. Het manifest heeft 4 kernwaarden:
+Het Agile Manifesto is een reeks van principes voor het ontwikkelen van software. Het manifest is opgesteld door een groep softwareontwikkelaars. Het manifest kent 4 kernwaarden:
 - Personen en interacties zijn belangrijker dan processen en tools
 
 Dit principe betekend dat de focus is op de leden van het team in plaats van op tools en documentatie. Dit komt o.a. terug in de retrospective en planning.
@@ -153,11 +156,17 @@ Atlassian: https://www.atlassian.com/agile/kanban/kanban-vs-scrum
 
 Visual Paradigm: https://www.visual-paradigm.com/scrum/scrum-vs-waterfall-vs-agile-vs-lean-vs-kanban/
 
-Azure DevOps (Scrum)board:
+
+**Azure DevOps (Scrum)board:**
 
 ![img.png](images/AzureDevOpsBoard.png)
 
-To do: **toelichting DoD, kleine taken etc.**
+In Azure Devops hebben we de sprints gepland, user stories en taken toegevoegd. Daarnaast gebruiken we op advisering van de product owners de geïntegreerde Git functionaliteit voor onze repo's. Ook gebruiken we de DevOps Pipelines voor onze CI/CD. 
+
+Bij de eerste sprints van het project kwamen we er achter dat de taken te algemeen beschreven werden. Ook werkte er meerdere mensen aan 1 taak. Uiteindelijk hebben we dit veranderd door kleinere taken te maken, zodat ieder lid een taak kan oppakken.
+Ook hebben we de taken beter geformuleerd en op advies van de productowners een Definition of Done toegevoegd, zodat er geen discussie kan ontstaan over wanneer een taak af is:
+
+![img.png](images/DevOpsTaskDoD.png)
 
 To do: **Insert screenshot burndown chart**
 
@@ -192,16 +201,16 @@ In onderstaande afbeelding is de architectuurdiagram van het groepsproject te zi
 ![img.jpg](images/Architectuurdiagram%20GP.jpg)
 
 ## Cultural differences and ethics
-Ik heb gekeken naar mijn interculturele competentie door een assessment van IDI (Intercultural Development Inventory) te maken.
+Ik heb gekeken naar mijn interculturele competenties door een assessment van IDI (Intercultural Development Inventory) te maken.
 Ook heb ik gekeken naar de uitkomsten hiervan middels een debriefing en quiz. 
 
-Uit de assessment kwam naar voren dat ik mijn vaardigheden met betrekking tot het aanpassen en begrijpen van culturele verschillen erg heb overschat.
+Uit het assessment kwam naar voren dat ik mijn vaardigheden met betrekking tot het aanpassen en begrijpen van culturele verschillen erg heb overschat.
 
-In onderstaande afbeelding is de score te zien, welke ik mezelf gegeven heb (perceived):
+In onderstaande afbeelding is de score te zien waarop ik mezelf had ingeschat (perceived):
 
 ![img.png](images/IDIPerceivedScore.png)
 
-Deze score valt binnen het oriëntatieprofiel 'minimization': dit weerspiegelt een tendens om de nadruk te leggen op overeenkomsten tussen culturen, maar belangrijke verschillen in waarden, waarneming en gedrag over het hoofd kan zien.
+Deze score valt binnen het oriëntatieprofiel 'minimization': dit weerspiegelt een tendens om de nadruk te leggen op overeenkomsten tussen culturen, maar waarbij belangrijke verschillen in waarden, waarneming en gedrag over het hoofd gezien kunnen worden.
 
 In onderstaande afbeelding is mijn werkelijke score (developmental) te zien: 
 
@@ -212,10 +221,10 @@ Hier kan ik mijzelf in herkennen, aangezien ik mijn eigen cultuur uiteraard het 
 
 In onderstaande afbeelding zijn de positieve kanten van het profiel polarisatie te zien, en de kansen die er nog liggen:
 
-![img.png](IDIPolarization.png)
+![img.png](images/IDIPolarization.png)
 
 Ik ben van plan om meer te kijken naar overeenkomsten tussen mijn eigen cultuur en andere culturen, en om niet te kritisch te zijn op mijn eigen cultuur.
-Ook hoop ik hiermee in te zien dat iedere cultuur een mix van positieve en negatieve kanten heeft.
+Ook hoop ik hiermee in te gaan zien dat iedere cultuur een mix van positieve en negatieve kanten heeft.
 
 To do: **analyse / omschrijving over ethiek van de applicatie**
 
@@ -224,6 +233,9 @@ Voor het opstellen van requirements heb ik gebruik gemaakt van user stories in c
 Deze zijn per sprint bijgehouden in Jira:
 
 ![img.png](images/Jira%20board%202.png)
+
+In het individuele project is geen gebruik gemaakt van Scrum, aangezien ik niet werkte in een team en ook geen productowners had.
+Voor het groepsproject is wel gebruik gemaakt van Scrum: zie [Agile](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#agile).
 
 ## Business processes
 
@@ -234,6 +246,8 @@ To do: **Insert FeedPulse screenshot / export**
 In het groepsproject hebben we elkaar aan het einde van de sprint peer feedback gegeven:
 
 ![img.png](images/Peer%20feedback.png)
+
+Ook heb ik onderzoeken geschreven met gebruik van het DOT-framework, zie [Software Quality](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#software-quality).
 
 To do: **reflecteren op proces en verschillen tussen GP en IP (scrum etc).**
 
