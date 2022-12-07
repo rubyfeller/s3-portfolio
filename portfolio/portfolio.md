@@ -54,6 +54,30 @@ Voor het bewaken van de kwaliteit van de software heb ik gebruik gemaakt van Son
 
 To do: **toevoegen wat gedaan is met de code smells / security notices.**
 
+In onderstaande afbeelding is een van de code smells te zien:
+
+![img.png](images/SonarCodeSmell.png)
+
+Ook staat er een toelichting bij over waarom dit een probleem is: "When verifying that code raises a runtime exception, a good practice is to avoid having multiple method calls inside the tested code, to be explicit about which method call is expected to raise the exception.
+
+It increases the clarity of the test, and avoid incorrect testing when another method is actually raising the exception."
+
+Hierom heb ik de code aangepast zodat er maar 1 exception op 1 method call mogelijk is.
+
+Ook hadden veel code smells te maken met code die in minder regels geschreven kon worden, ook dit heb ik toegepast. Daarnaast hadden de meeste code smells betrekking op code die uitgecomment is.
+Aangezien ik gebruik maak van versiebeheer heb ik besloten om geen stukken code gecomment in mijn code te laten staan.
+
+Tot slot waren er ook enkele code smells waar ik niets mee gedaan heb. Zo gebruik ik af en toe dezelfde tekst in een exception test. Aangezien het hier om tests gaat, waar alle tests in principe los van elkaar moeten staan, heb ik besloten hier niets mee te doen.
+
+****Security notices****
+
+Gedurende het ontwikkelen van de applicatie zijn ook security notices naar boven gekomen:
+
+![img.png](images/SonarCloudSecurityNotice.png)
+
+Zoals in de afbeelding is te zien, word op dit moment ieder soort HTTP-request naar de applicatie toegestaan. Dit is niet veilig en dient aangepast te worden wanneer de applicatie naar productie gaat. SonarCloud zorgt er voor dat je dit niet vergeet.
+
+
 To do: **stukje toevoegen over onderzoek naar veiligheid JWT-tokens**
 
 #### Onderzoek 1
@@ -201,6 +225,10 @@ In onderstaande afbeelding is de architectuurdiagram van het groepsproject te zi
 ![img.jpg](images/Architectuurdiagram%20GP.jpg)
 
 ## Cultural differences and ethics
+
+### Wat is cultuur?
+Cultuur omschrijft de gewoontes, normen en waarden van een samenleving. Het kan verschillende groepen mensen van elkaar onderscheiden, en word overgedragen van generatie op generatie.
+
 Ik heb gekeken naar mijn interculturele competenties door een assessment van IDI (Intercultural Development Inventory) te maken.
 Ook heb ik gekeken naar de uitkomsten hiervan middels een debriefing en quiz. 
 
@@ -226,7 +254,43 @@ In onderstaande afbeelding zijn de positieve kanten van het profiel polarisatie 
 Ik ben van plan om meer te kijken naar overeenkomsten tussen mijn eigen cultuur en andere culturen, en om niet te kritisch te zijn op mijn eigen cultuur.
 Ook hoop ik hiermee in te gaan zien dat iedere cultuur een mix van positieve en negatieve kanten heeft.
 
+### In kaart brengen van culturele verschillen
+Om culturele verschillen tussen landen in kaart te brengen, heb ik gekeken naar het cultuurmodel van Geert Hofstede.
+Dit cultuurmodel laat de verschillen tussen landen en culturen zien aan de hand van 6 dimensies. Dit maakt het mogelijk om de culturen te vergelijken.
+
+Onderstaand de belangrijkste dimensies:
+- Machtsafstand
+
+Geeft aan in hoeverre hiërarchie een belangrijke rol speelt in een land. Nederland scoort erg laag op deze dimensie. Dit betekend dat leidinggevenden bijvoorbeeld toeganlijk zijn en informeel aangesproken kunnen worden. De communicatie is direct.
+In andere landen zoals Maleisië is de werkcultuur veel hiërarchischer: mensen verwachten dat hen verteld word wat ze moeten doen, en het doel is om een baan te krijgen waarin ze zelf kunnen bepalen wat anderen moeten doen.
+
+- Individualisme
+
+Geeft aan hoe individualistisch of hoe collectivistisch een land is. Nederland scoort hier erg hoog: men zorgt vooral voor zichzelf en directe familie. Daarnaast worden bijvoorbeeld promoties alleen gegeven op basis van resultaten.
+Aziatische culturen zijn collectivistischer: de communicatie is indirect en men vermijdt conflicten. De prioriteit in (zakelijke)relaties ligt niet op taken maar op moraliteit.
+
+- Masculiniteit
+
+Deze dimensie geeft aan in hoeverre er waarde gehecht word aan mannelijke en vrouwelijke kwaliteiten. Landen als Nederland worden als feminiem bestempeld omdat de rolverdeling tussen man en vrouw overlapt. 
+In landen als Japan is een duidelijke rolverdeling tussen de man en vrouw.
+
+- Onzekerheidsvermijding
+
+Geeft aan hoe een samenleving omgaat met onzekerheid. Sommige culturen willen zoveel mogelijk onzekerheid vermijden, door bijvoorbeeld het gebruik van rituelen. Ook is geloof er sterker.
+Nederland scoort gemiddeld. Mensen hebben wel een lichte voorkeur voor het vermijden van onzekerheid. Dit houdt in dat men zich graag aan regels houd en punctualiteit belangrijk is. Ook is veiligheid erg belangrijk.
+
+Bronnen:
+
+Hofstede Insights: https://www.hofstede-insights.com/country-comparison/the-netherlands/
+
+Wikipedia: https://nl.wikipedia.org/wiki/Geert_Hofstede
+
+Clearly Cultural: https://clearlycultural.com/geert-hofstede-cultural-dimensions/
+
 To do: **analyse / omschrijving over ethiek van de applicatie**
+
+### Ethiek
+
 
 ## Requirements and design
 Voor het opstellen van requirements heb ik gebruik gemaakt van user stories in combinatie met acceptatiecriteria / definition of done.
@@ -236,6 +300,8 @@ Deze zijn per sprint bijgehouden in Jira:
 
 In het individuele project is geen gebruik gemaakt van Scrum, aangezien ik niet werkte in een team en ook geen productowners had.
 Voor het groepsproject is wel gebruik gemaakt van Scrum: zie [Agile](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#agile).
+
+Zie voor de architectuur van het IP [Webapplicatie](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#c4-context-diagram), en zie voor een architectuurtekening van het GP [CI/CD](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#cicd).
 
 ## Business processes
 
