@@ -16,11 +16,21 @@ Er is gekozen voor Spring Boot omdat het er voor zorgt dat je geen server nodig 
 
 Om Java onder de knie te krijgen heb ik eerst een [cursus](https://www.codecademy.com/learn/learn-java) op CodeCademy gevolgd. Dit hielp om de verschillen tussen C# en Java te leren.
 
+
+****Omschrijving IP****
+
 De applicatie die ik gemaakt heb, is een platform / marktplaats voor mensen om klussen op te plaatsen.
 Een ondernemer kan deze klus vervolgens inzien en ook oppakken om uit te voeren. Hierbij kan de ondernemer een prijs en datum aanbieden.
 De gebruiker die een ondernemer zoekt om de klus uit te voeren, kan in zijn account zijn aangemaakte klussen inzien.
 
+****Omschrijving GP****
+
+Voor het groepsproject hebben we een app gemaakt die het mogelijk maakt om collega's gemakkelijk te kunnen vinden. Dus bijvoorbeeld of ze thuiswerken, op kantoor of bijvoorbeeld niet aan het werk zijn.
+Ook is te zien waar de collega dan aan het werk is. Het doel is dat medewerkers elkaar gemakkelijker kunnen vinden, het probleem dat het bedrijf heeft is dat mensen veel tijd kwijt zijn aan het vinden van elkaar.
+
 To do: **meerdere actors toevoegen, componentdiagram, code diagram en stukje over UI, front-end testen, API-documentatie aan de hand van Postman of Swagger.**
+
+
 
 #### C4: context diagram
 ![img.png](images/C4ModelSystemContextDiagram2.png)
@@ -290,7 +300,68 @@ Clearly Cultural: https://clearlycultural.com/geert-hofstede-cultural-dimensions
 To do: **analyse / omschrijving over ethiek van de applicatie**
 
 ### Ethiek
+****Wat maakt ethiek belangrijk in software engineering?****
 
+Technologie kan veel impact hebben op de samenleving. Daarom is het noodzakelijk om goed te kijken naar de gevolgen en gevaren van de gemaakte technologie.
+
+****ACM Software Engineering Code of Ethics****
+
+De committee on professional ethics (COPE) heeft een code opgesteld voor software engineers. Hiermee willen ze ontwikkelaars helpen om ethisch om te gaan met hun werk.
+Ze hebben hiervoor 8 principes opgesteld:
+
+- Public
+
+Software engineers dienen te handelen in het algemeen belang. Neem verantwoordelijkheid voor het gemaakte werk. Ook dienen de mogelijke gevaren voor mensen aan de autoriteiten doorgegeven te worden.
+
+- Client and employer
+
+Wees eerlijk over beperkte ervaring of kennis. Accepteer geen werk dat tegen de belangen van de werkgever ingaat.
+
+- Product
+
+Streef naar hoge kwaliteit, en breng in kaart welke risico's er zijn met betrekking tot ethische kwesties, economische, en klimaat.
+Ga respectvol om met privacy in de applicatie en documenten. 
+
+- Judgment
+
+Software engineers moeten onafhankelijk zijn in hun professionele overwegingen. Ook is het niet de bedoeling te werken aan projecten waarin sprake is van belangenverstrengeling.
+
+- Management
+
+Promoot kwaliteit en reduceer risico's. Zorg er voor dat de software engineers op de hoogte zijn de procedures met betrekking tot omgaan met de bescherming van wachtwoorden en bestanden.
+Vraag een software engineer niet om iets te doen dat tegenstrijdig is aan deze code.
+
+- Profession
+
+Draag bij aan het creëren van een organisatie die goed omgaat met ethiek. Verspreid kennis over software engineering.
+Geef aan wanneer er niet ethisch gehandeld word, tenzij dit niet mogelijk is of gevaarlijk is.
+
+- Colleagues
+
+Spoor collega's aan om de ethische code op te volgen. Ga in op feedback die je krijgt van collega's.
+
+- Self
+
+Blijf jezelf een leven lang ontwikkelen en promoot een ethische aanpak.
+Zie in dat het niet volgen van de ethische code niet past bij een professionele software engineer.
+
+****Etische analyse van applicatie****
+
+Om de ethische aspecten van mijn applicatie in kaart te brengen, heb ik gebruik gemaakt van de Technology Impact Cycle Tool (TICT).
+De analyse heb ik gemaakt van het groepsproject, aangezien in het individuele project minder ethische aspecten een rol spelen.
+Zie [Webapplicatie](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#webapplicatie) voor een omschrijving van het groepsproject.
+
+![img.png](images/TICTAnalysis.png)
+[Klik hier](attachments/TICT%20Find%20My%20Colleague%20QUICKSCAN.pdf) voor PDF variant.
+
+Zoals in de bovenstaande afbeelding te zien is, zijn er enkele conflicten. Zo is het bijvoorbeeld niet duidelijk voor de gebruiker welke data waarvoor gebruikt word. Dit hebben we aangegeven bij de productowners.
+
+
+Bronnen:
+
+Committee on Professional Ethics: https://ethics.acm.org/code-of-ethics/software-engineering-code/
+
+Technology Impact Tool: https://www.tict.io/
 
 ## Requirements and design
 Voor het opstellen van requirements heb ik gebruik gemaakt van user stories in combinatie met acceptatiecriteria / definition of done.
