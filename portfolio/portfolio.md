@@ -345,7 +345,7 @@ Spoor collega's aan om de ethische code op te volgen. Ga in op feedback die je k
 Blijf jezelf een leven lang ontwikkelen en promoot een ethische aanpak.
 Zie in dat het niet volgen van de ethische code niet past bij een professionele software engineer.
 
-****Etische analyse van applicatie****
+#### Etische analyse van applicatie
 
 Om de ethische aspecten van mijn applicatie in kaart te brengen, heb ik gebruik gemaakt van de Technology Impact Cycle Tool (TICT).
 De analyse heb ik gemaakt van het groepsproject, aangezien in het individuele project minder ethische aspecten een rol spelen.
@@ -385,6 +385,69 @@ In het groepsproject hebben we elkaar aan het einde van de sprint peer feedback 
 ![img.png](images/Peer%20feedback.png)
 
 Ook heb ik onderzoeken geschreven met gebruik van het DOT-framework, zie [Software Quality](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#software-quality).
+
+#### UI Design
+
+In het groepsproject zijn we per scherm/functionaliteit eerst een wireframe gaan maken. Deze hebben we vervolgens uitgebreid naar een Figma prototype.
+Deze prototypes hebben we laten zien en laten testen door andere. Ook hebben de productowners feedback gegeven op het design. Zo was bijvoorbeeld niet helemaal duidelijk wanneer een veld verplicht was, en miste er een melding die aangaf wat de gebruiker fout heeft gedaan.
+
+In mijn individuele project heb ik gebruik gemaakt van Google's Material Design: een designtaal om applicaties op een gestandaardiseerde manier te stylen. 
+
+***Kleuren***
+
+In mijn applicatie komen de kleuren blauw, wit en rood voor. Voor blauw heb ik gekozen vanwege het vertrouwen en de stabiliteit die het weerspiegeld. De witte achtergrond heb ik gekozen vanwege de open mogelijkheden die het aangeeft.
+Voor acties als verwijderen gebruik ik de kleur rood: deze weerspiegeld gevaar, zodat ze hun actie niet zomaar uitvoeren.
+
+Ook heb ik met Lighthouse van Google een scan gemaakt van de performance van mijn applicatie op een computer en smartphone:
+
+![img.png](images/LighthouseScanFrontend.png)
+
+Zoals is te zien was de performance van de applicatie niet goed. 
+
+Om dit aan te pakken heb ik de bottlenecks bekeken en deze opgelost. Zo werd er bijvoorbeeld niets getoond wanneer er nog data ingeladen werd, waardoor je even een compleet lege pagina zag.
+Ook waren enkele JS-bestanden te groot en konden deze verkleind worden. Ook importeerde ik bepaalde onderdelen van Material Design terwijl ik deze niet gebruikte, ook deze heb ik verwijderd. Tot slot heb ik de console.logs weggehaald, aangezien deze alleen in development gebruikt moeten worden.
+
+De vernieuwde Lighthouse-score:
+
+![img.png](images/LighthouseScanFrontendImproved.png)
+
+Tot slot heb ik front-end tests geschreven met React Testing Library, met als test runner Jest.
+
+In onderstaande afbeelding is mijn test van de AssignmentCard component zichtbaar:
+
+![img.png](images/AssignmentCardTestFrontend.png)
+
+Ik omschrijf allereerst wat het resultaat van de test moet zijn. Het component moet gerenderd worden met de input die is aangegeven.
+De input heb ik aan moeten maken (const assignment) aangezien ik in de front-end ook een specifieke assignment meegeef aan de card, maar dan dynamisch.
+Ik haal het te testen element op aan de hand van een testid, deze heb ik in de daadwerkelijke component toe moeten voegen aan het element om het element te kunnen vinden.
+
+In de assert check ik of de waardes die op de pagina komen te staan, overeen komen met de gegevens van de assignment. Ook check ik of de datetime correct geconverteerd word. Dit wordt namelijk gedaan in het component met gebruik van date-fns.
+
+***Snapshot tests***
+
+Een snapshot test kan heel gemakkelijk geschreven worden. Het gemak ervan is dat je direct een test zie falen op het moment dat de pagina er niet uit ziet zoals je verwacht.
+De test vergelijkt namelijk of de pagina nog hetzelfde is als in de vorige snapshot. Mocht dit niet zo zijn, faalt de test.
+
+Het nadeel van dit type tests is dat je handmatig moet kijken wat er veranderd is, het schrijven ervan is echter vele malen makkelijker.
+
+Snapshot-test:
+
+![img.png](images/SnapshotTestFrontend.png)
+
+***Usability test***
+
+Om te valideren dat mijn applicatieflow duidelijk is voor mensen, heb ik een usability test uitgevoerd.
+
+Ik heb mensen een opdracht gegeven en hen gevraagd deze uit te voeren zonder verdere instructie van mijn kant.
+
+De opdracht was:
+- Maak een account aan
+- Maak een opdracht aan
+- Bewerk de opdracht
+- Verwijderd de opdracht
+
+De flow was duidelijk, mensen konden de knop om te registreren goed vinden. Echter was de opdracht die de gebruiker aanmaakte niet direct zichtbaar onder 'Assignments'.
+Ook was bij het registreren niet helemaal duidelijk aan wie ze authorisatie gaven, dit komt echter omdat het een schoolproject is, waardoor er 'S3' staat.
 
 To do: **reflecteren op proces en verschillen tussen GP en IP (scrum etc).**
 
