@@ -374,24 +374,13 @@ Voor het groepsproject is wel gebruik gemaakt van Scrum: zie [Agile](https://git
 
 Zie voor de architectuur van het IP [Webapplicatie](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#c4-context-diagram), en zie voor een architectuurtekening van het GP [CI/CD](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#cicd).
 
-## Business processes
-
-## Professional
-
-To do: **Insert FeedPulse screenshot / export**
-
-In het groepsproject hebben we elkaar aan het einde van de sprint peer feedback gegeven:
-
-![img.png](images/Peer%20feedback.png)
-
-Ook heb ik onderzoeken geschreven met gebruik van het DOT-framework, zie [Software Quality](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#software-quality).
 
 #### UI Design
 
 In het groepsproject zijn we per scherm/functionaliteit eerst een wireframe gaan maken. Deze hebben we vervolgens uitgebreid naar een Figma prototype.
 Deze prototypes hebben we laten zien en laten testen door andere. Ook hebben de productowners feedback gegeven op het design. Zo was bijvoorbeeld niet helemaal duidelijk wanneer een veld verplicht was, en miste er een melding die aangaf wat de gebruiker fout heeft gedaan.
 
-In mijn individuele project heb ik gebruik gemaakt van Google's Material Design: een designtaal om applicaties op een gestandaardiseerde manier te stylen. 
+In mijn individuele project heb ik gebruik gemaakt van Google's Material Design: een designtaal om applicaties op een gestandaardiseerde manier te stylen.
 
 ***Kleuren***
 
@@ -402,7 +391,7 @@ Ook heb ik met Lighthouse van Google een scan gemaakt van de performance van mij
 
 ![img.png](images/LighthouseScanFrontend.png)
 
-Zoals is te zien was de performance van de applicatie niet goed. 
+Zoals is te zien was de performance van de applicatie niet goed.
 
 Om dit aan te pakken heb ik de bottlenecks bekeken en deze opgelost. Zo werd er bijvoorbeeld niets getoond wanneer er nog data ingeladen werd, waardoor je even een compleet lege pagina zag.
 Ook waren enkele JS-bestanden te groot en konden deze verkleind worden. Ook importeerde ik bepaalde onderdelen van Material Design terwijl ik deze niet gebruikte, ook deze heb ik verwijderd. Tot slot heb ik de console.logs weggehaald, aangezien deze alleen in development gebruikt moeten worden.
@@ -448,6 +437,18 @@ De opdracht was:
 
 De flow was duidelijk, mensen konden de knop om te registreren goed vinden. Echter was de opdracht die de gebruiker aanmaakte niet direct zichtbaar onder 'Assignments'.
 Ook was bij het registreren niet helemaal duidelijk aan wie ze authorisatie gaven, dit komt echter omdat het een schoolproject is, waardoor er 'S3' staat.
+
+## Business processes
+
+## Professional
+
+To do: **Insert FeedPulse screenshot / export**
+
+In het groepsproject hebben we elkaar aan het einde van de sprint peer feedback gegeven:
+
+![img.png](images/Peer%20feedback.png)
+
+Ook heb ik onderzoeken geschreven met gebruik van het DOT-framework, zie [Software Quality](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#software-quality).
 
 To do: **reflecteren op proces en verschillen tussen GP en IP (scrum etc).**
 
