@@ -3,20 +3,6 @@ In dit portfolio licht ik mijn werk per leerdoel toe. Het gaat hierbij om zowel 
 
 
 ## Webapplicatie
-
-**Front-end**
-
-Voor de front-end word gebruik gemaakt van React. Aangezien React het meest gebruikte Javascript framework is en er veel ondersteuning en informatie over is te vinden.
-Ik had voor dit semester nog geen kennis van React, maar wel van VueJS. Aangezien er veel gelijkenissen zijn, ben ik in React begonnen aan de hand van de [uitgebreide documentatie](https://reactjs.org/docs/getting-started.html).
-
-**Back-end**
-
-De back-end word geschreven in Java i.c.m. het Spring Boot framework om een REST-API te ontwikkelen. Dit omdat ik al ervaring heb met C# en graag een nieuwe taal wil leren.
-Er is gekozen voor Spring Boot omdat het er voor zorgt dat je geen server nodig hebt, maar de applicatie lokaal kan draaien. Ook kan je de applicatie snel configureren. Daarnaast biedt het verschillende ORMs voor databases.
-
-Om Java onder de knie te krijgen heb ik eerst een [cursus](https://www.codecademy.com/learn/learn-java) op CodeCademy gevolgd. Dit hielp om de verschillen tussen C# en Java te leren.
-
-
 ****Omschrijving IP****
 
 De applicatie die ik gemaakt heb, is een platform / marktplaats voor mensen om klussen op te plaatsen.
@@ -28,14 +14,10 @@ De gebruiker die een ondernemer zoekt om de klus uit te voeren, kan in zijn acco
 Voor het groepsproject hebben we een app gemaakt die het mogelijk maakt om collega's gemakkelijk te kunnen vinden. Dus bijvoorbeeld of ze thuiswerken, op kantoor of bijvoorbeeld niet aan het werk zijn.
 Ook is te zien waar de collega dan aan het werk is. Het doel is dat medewerkers elkaar gemakkelijker kunnen vinden, het probleem dat het bedrijf heeft is dat mensen veel tijd kwijt zijn aan het vinden van elkaar.
 
-To do: **meerdere actors toevoegen, componentdiagram, code diagram en stukje over UI, front-end testen, API-documentatie aan de hand van Postman of Swagger.**
-
-
-
 #### C4: context diagram
 ![img.png](images/C4ModelSystemContextDiagram2.png)
 
-Uit feedback bleek dat de API (grijs blok), niet gezien kan worden als extern systeem omdat het bij de applicatie hoort. Dit maakt de contextdiagram minder relevant. Ik heb hem toch laten staan omdat ik er wel wat van geleerd heb. 
+Uit feedback bleek dat de API (grijs blok), niet gezien kan worden als extern systeem omdat het bij de applicatie hoort. Dit maakt de contextdiagram minder relevant. Ik heb hem toch laten staan omdat ik er wel wat van geleerd heb.
 
 #### C4: container diagram
 ![img.png](images/C4ModelContainerDiagram2.png)
@@ -45,6 +27,83 @@ Uit feedback bleek dat de API (grijs blok), niet gezien kan worden als extern sy
 
 [Back-end repository
 ](https://github.com/rubyfeller/s3-ip-restapi)
+
+### Front-end
+
+Voor de front-end word gebruik gemaakt van React. Aangezien React het meest gebruikte Javascript framework is en er veel ondersteuning en informatie over is te vinden.
+Ik had voor dit semester nog geen kennis van React, maar wel van VueJS. Aangezien er veel gelijkenissen zijn, ben ik in React begonnen aan de hand van de [uitgebreide documentatie](https://reactjs.org/docs/getting-started.html).
+Toch bleken er ook veel verschillen te zijn tussen Vue en React, onder andere op het gebied van functies, hooks en components.
+
+#### Architectuur
+
+Aangezien React erg open is en je iedere architectuur kunt kiezen, was het lastig om op te starten. 
+Uiteindelijk heb ik wel een handige manier van werken gevonden:
+
+![img.png](images/FilestructureReact.png)
+
+***Features***
+
+Zoals in bovenstaande afbeelding is te zien, staan sommige mappen er dubbel in. Dit komt doordat ik met 'features' werk: in iedere feature maak ik dezelfde submappen components, hooks en services.
+Ook heb ik deze zelfde mappen globaal aangemaakt. Wanneer er een hook, component of service is die in meerdere features gebruikt kan worden, plaats ik deze in de globale map. Wanneer een van deze 3 maar in 1 feature gebruikt word, plaats ik deze bij de juiste feature.
+
+Dit voorkomt het probleem dat ik bij de start had: alle bestanden onder elkaar zonder structuur. Daarnaast kan ik de components en hooks gemakkelijk in 1 bestand exporteren. 
+Dit zorgt ervoor dat ik in andere bestanden niet vanuit verschillende locaties hoef te importeren, maar slechts vanuit 1 index file uit de root van de feature map.
+
+***Layouts, libs en pages***
+
+Gezien er een aantal UI-onderdelen zijn welke op meerdere pagina's gebruikt worden, heb ik deze in de map 'layouts' geplaatst. Denk aan alerts en de nabar.
+
+In de map library plaats ik functies die een library gebruiken en op meerdere plekken gebruikt worden. Dit heet het facade pattern en zorg ervoor dat ik niet in iedere hook/functie opnieuw een Axios functie hoef aan te maken. Mocht bijvoorbeeld de URL van de API wijzigen, hoef ik dit maar op 1 plek aan te passen.
+De map pages bevat alle pagina's van de applicatie. Indien de applicatie groter zou worden, zou ik deze ook nog kunnen onderverdelen in features.
+
+De front-end tests heb ik bij het geteste onderdeel geplaatst. Zo staat de test van de AssignmentCard ook bij dit component. Zie [Requirements and design](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#requirements-and-design).
+
+***Router en Auth0 implementatie***
+
+Voor het verbinden van het juiste path aan de juiste pagina, heb ik [React Router](https://reactrouter.com/en/main) gebruikt. Ook heb ik in deze router de endpoints beschermd, met gebruik van een custom hook van Auth0. Dit zorgt ervoor dat je als gebruiker naar de login pagina gestuurd word indien je niet ingelogd bent.
+
+### Back-end
+
+De back-end word geschreven in Java i.c.m. het Spring Boot framework om een REST-API te ontwikkelen. Dit omdat ik al ervaring heb met C# en graag een nieuwe taal wil leren.
+Er is gekozen voor Spring Boot omdat het er voor zorgt dat je geen server nodig hebt, maar de applicatie lokaal kan draaien. Ook kan je de applicatie snel configureren. Daarnaast biedt het verschillende ORMs voor databases.
+
+Om Java onder de knie te krijgen heb ik eerst een [cursus](https://www.codecademy.com/learn/learn-java) op CodeCademy gevolgd. Dit hielp om de verschillen tussen C# en Java te leren.
+
+#### Architectuur
+
+Voor de back-end heb ik gekozen voor het repository pattern. Het doel van dit design pattern is het maken van een scheiding tussen de business logic en data access layer. Hierdoor is het mogelijk om gemakkelijk een ander databasesysteem te gebruiken.
+
+De verschillende lagen (Java packages) zijn:
+
+- Controller laag, deze heb ik presentation genoemd
+
+De controller bevat alle API-endpoints en roept methods in de service class aan (via een interface). Gebruikt geen Hibernate models, maar DTO's.
+
+- Service layer, deze heb ik logic genoemd
+
+Deze laag bevat de business logic en roept de converters en repositories (dals) aan.
+
+- Repository layer, deze heb ik dal genoemd.
+
+Bevat alle Hibernate-models en de repositories. 
+
+De overige packages/lagen zijn config om CORS in te stellen, converter waarin ik gebruik maak van de package ModelMapper om DTO's om te zetten naar entiteiten en vice versa. In de DTO-laag staan alle DTO's, dit voorkomt dat de presentatie-laag de logica-laag direct gebruikt.  Daarnaast is er een security laag waarin ik voornamelijk de endpoints bescherm middels Spring Security (i.c.m. Auth0).
+
+![img.png](images/FileStructureSpring.png)
+
+In de toekomst zou ik de naamgeving van de lagen wellicht anders aanpakken. Alhoewel er geen standaarden zijn, gebruik in namen die over het algemeen minder gebruikt worden. Dit heb ik in het begin zo aangepakt zodat helder was welke laag waarvoor verantwoordelijk is.
+
+***OpenAPI documentatie***
+
+Gedurende het testen van de Rest-API heb ik gebruik gemaakt van Postman. Hierin dient echter alles handmatig toegevoegd te worden.
+Aangezien er ook een open-source standaard bestaat, OpenAPI, heb ik deze gebruikt voor de documentatie. Naast dat het een standaard is, waardoor ontwikkelaars de documentatie gemakkelijk kunnen begrijpen, is het ook mogelijk om de documentatie automatisch te laten maken.
+Dit heb ik gedaan door het gebruik van een implementatie op OpenAPI: Swagger. Dit in combinatie met [Spring Doc](https://springdoc.org/) maakte het erg gemakkelijk.
+
+![img.png](images/SwaggerDocs.png)
+
+Naast de UI is de documentatie ook te vinden in JSON-formaat via de endpoint v3/api-docs.
+
+Om het inzien van de documentatie mogelijk te kunnen maken, heb ik de URLs van Swagger en OpenAPI wel een vrijstelling moeten geven in Spring Security. Ook heb ik de toegang van de documentatie op productie uitgezet.
 
 **Database**
 
@@ -61,8 +120,6 @@ Voor het bewaken van de kwaliteit van de software heb ik gebruik gemaakt van Son
 
 ![img.png](images/SonarCloud%20GH%20Action.png)
 ![img.png](images/SonarCloud%20code%20scan%203.png)
-
-To do: **toevoegen wat gedaan is met de code smells / security notices.**
 
 In onderstaande afbeelding is een van de code smells te zien:
 
@@ -111,6 +168,8 @@ Ik test hier of de assignment wordt toegevoegd, of de velden correct zijn, en of
 In onderstaande afbeelding is een voorbeeld van een acceptatietest te zien. Hierbij word de controller getest, voornamelijk om te controleren of het resultaat en de HTTP statuscode uit het endpoint correct is:
 
 ![img.png](images/AcceptanceTestController.png)
+
+Zie voor front-end testen [Requirements and design](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#requirements-and-design).
 
 ## Agile
 ### Wat houdt Agile in?
@@ -297,8 +356,6 @@ Wikipedia: https://nl.wikipedia.org/wiki/Geert_Hofstede
 
 Clearly Cultural: https://clearlycultural.com/geert-hofstede-cultural-dimensions/
 
-To do: **analyse / omschrijving over ethiek van de applicatie**
-
 ### Ethiek
 ****Wat maakt ethiek belangrijk in software engineering?****
 
@@ -369,23 +426,62 @@ Deze zijn per sprint bijgehouden in Jira:
 
 ![img.png](images/Jira%20board%202.png)
 
-In het individuele project is geen gebruik gemaakt van Scrum, aangezien ik niet werkte in een team en ook geen productowners had.
+In het individuele project is niet volledig gebruik gemaakt van Scrum, aangezien ik niet werkte in een team en ook geen productowners had.
 Voor het groepsproject is wel gebruik gemaakt van Scrum: zie [Agile](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#agile).
 
 Zie voor de architectuur van het IP [Webapplicatie](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#c4-context-diagram), en zie voor een architectuurtekening van het GP [CI/CD](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#cicd).
 
 
-#### UI Design
+#### UI en UX Design
 
 In het groepsproject zijn we per scherm/functionaliteit eerst een wireframe gaan maken. Deze hebben we vervolgens uitgebreid naar een Figma prototype.
 Deze prototypes hebben we laten zien en laten testen door andere. Ook hebben de productowners feedback gegeven op het design. Zo was bijvoorbeeld niet helemaal duidelijk wanneer een veld verplicht was, en miste er een melding die aangaf wat de gebruiker fout heeft gedaan.
 
-In mijn individuele project heb ik gebruik gemaakt van Google's Material Design: een designtaal om applicaties op een gestandaardiseerde manier te stylen.
+In mijn individuele project heb ik gebruik gemaakt van Google's Material Design: een designtaal om applicaties op een gestandaardiseerde manier te stylen. Een van de belangrijkste redenen voor het kiezen van Material Design is de uitgebreide documentatie van [MUI](https://mui.com/core/) en het feit dat het volledig responsive is. Dit is tegenwoordig noodzakelijk voor een applicatie.
+
+In de honeycomb van Peter Morville is goed zichtbaar welke elementen het belangrijkst zijn in UX:
+
+![img.jpg](images/honeycomb.jpg)
+
+**Useful**: de applicatie moet waarde toevoegen
+
+**Usable**: de applicatie moet makkelijk in gebruik zijn
+
+**Desirable**: de applicatie moet aantrekkelijk zijn
+
+**Findable**: in de applicatie moet makkelijk genavigeerd kunnen worden
+
+**Accessible**: mensen met een beperking moeten de applicatie kunnen gebruiken
+
+**Credible**: de applicatie moet vertrouwen uitstralen, zodat gebruikers de applicatie ook vertrouwen.
+
+De applicatie voldoet aan alle elementen, echter is er vooral op het gebied van accessibility nog veel verbetering mogelijk. Zo had ik meer gebruik kunnen maken van ARIA html-attributes in bijvoorbeeld [foutmeldingen](https://www.w3.org/WAI/tutorials/forms/notifications/). 
+Ook had ik [landmarks](https://www.scottohara.me/blog/2018/03/03/landmarks.html) toe kunnen voegen zodat mensen met een screenreader sneller naar een andere plek in de applicatie kunnen navigeren.
+
+Om toch te testen of de applicatie enigszins accessible is, zonder een screenreader te hebben, heb ik mijn muis gedisconnect en heb ik de applicatie geprobeerd te gebruiken met alleen het toetsenbord.
+Eigenlijk kon ik alles in de applicatie doen: het enige dat niet werkte was het in- en uitloggen via de dropdown achter de avatar. Ook was het onhandig om van onder weer terug naar boven te komen. Hier zou ik in de toekomst landmarks en pagination voor toevoegen.
+
+Voorbeeld form validation:
+
+![img.png](images/FormValidationExample.png)
+
+Ook vroeg ik gebruikers bij verregaande acties zoals verwijderen om hun keus nogmaals te bevestigen, dit voorkomt dat het per ongeluk misgaat:
+
+![img.png](images/reconfirmExample.png)
+
+Bronnen:
+
+U.S. General Services Administration: https://www.usability.gov/what-and-why/accessibility.html
+
+React: https://reactjs.org/docs/accessibility.html
 
 ***Kleuren***
 
 In mijn applicatie komen de kleuren blauw, wit en rood voor. Voor blauw heb ik gekozen vanwege het vertrouwen en de stabiliteit die het weerspiegeld. De witte achtergrond heb ik gekozen vanwege de open mogelijkheden die het aangeeft.
 Voor acties als verwijderen gebruik ik de kleur rood: deze weerspiegeld gevaar, zodat ze hun actie niet zomaar uitvoeren.
+
+
+***Performance***
 
 Ook heb ik met Lighthouse van Google een scan gemaakt van de performance van mijn applicatie op een computer en smartphone:
 
@@ -435,10 +531,13 @@ De opdracht was:
 - Bewerk de opdracht
 - Verwijderd de opdracht
 
-De flow was duidelijk, mensen konden de knop om te registreren goed vinden. Echter was de opdracht die de gebruiker aanmaakte niet direct zichtbaar onder 'Assignments'.
-Ook was bij het registreren niet helemaal duidelijk aan wie ze authorisatie gaven, dit komt echter omdat het een schoolproject is, waardoor er 'S3' staat.
+De flow was duidelijk, mensen konden de knop om te registreren goed vinden. Echter was de opdracht die de gebruiker aanmaakte niet direct zichtbaar onder 'Assignments'. Ook was niet helemaal duidelijk dat 'Assignments' iets anders was, namelijk de assignments van de gebruiker zelf.
+Dit ga ik verbeteren.
+
+Ook was bij het registreren op de Auth0-pagina niet helemaal duidelijk aan wie ze authorisatie gaven, dit komt echter omdat het een schoolproject is, waardoor er 'S3' staat.
 
 ## Business processes
+To do: **proces uittekenen en analyseren**
 
 ## Professional
 
