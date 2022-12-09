@@ -120,7 +120,7 @@ Voor het bewaken van de kwaliteit van de software heb ik gebruik gemaakt van Son
 
 ![img.png](images/SonarCloud%20GH%20Action.png)
 ![img.png](images/SonarCloud%20code%20scan%203.png)
-
+![img.png](images/PullRequest.png)
 In onderstaande afbeelding is een van de code smells te zien:
 
 ![img.png](images/SonarCodeSmell.png)
