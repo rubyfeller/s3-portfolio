@@ -121,6 +121,7 @@ Voor het bewaken van de kwaliteit van de software heb ik gebruik gemaakt van Son
 ![img.png](images/SonarCloud%20GH%20Action.png)
 ![img.png](images/SonarCloud%20code%20scan%203.png)
 ![img.png](images/PullRequest.png)
+
 In onderstaande afbeelding is een van de code smells te zien:
 
 ![img.png](images/SonarCodeSmell.png)
@@ -529,7 +530,7 @@ De opdracht was:
 - Maak een account aan
 - Maak een opdracht aan
 - Bewerk de opdracht
-- Verwijderd de opdracht
+- Verwijder de opdracht
 
 De flow was duidelijk, mensen konden de knop om te registreren goed vinden. Echter was de opdracht die de gebruiker aanmaakte niet direct zichtbaar onder 'Assignments'. Ook was niet helemaal duidelijk dat 'Assignments' iets anders was, namelijk de assignments van de gebruiker zelf.
 Dit ga ik verbeteren.
@@ -538,6 +539,31 @@ Ook was bij het registreren op de Auth0-pagina niet helemaal duidelijk aan wie z
 
 ## Business processes
 To do: **proces uittekenen en analyseren**
+
+Voor het leerdoel Business processes heb ik het oude proces en het nieuwe business process van onze stakeholder gemodelleerd. Met als doel het inzichtelijk maken van de toegevoegde waarde van de door ons gerealiseerde applicatie (nieuwe proces).
+
+**Oud proces**
+
+![img.png](images/OudeprocesiO.png)
+
+Omschrijving oude proces:
+
+De medewerker komt naar kantoor en zoekt zijn collega. Indien de collega in de directe omgeving, bijvoorbeeld dezelfde ruimte, gevonden kan worden eindigt het proces. Mocht de collega niet gemakkelijk gevonden kunnen worden, gaat de medewerker handmatig kijken in de Outlook agenda van de collega. 
+Vervolgens kan de medewerker kijken of de collega een locatie in zijn agenda heeft staan, en of de medewerker daar ook echt zit. Indien dit het geval is stopt het proces. Wanneer dit niet het geval is gaat de medewerker de collega bellen. Indien de collega opneemt kunnen ze elkaar vinden. Wanneer de collega niet opneemt, kan de medewerker als laatste nog rondlopen in het gebouw om de collega te vinden. Mocht dit ook niets opleveren kan de medewerker de collega nogmaals bellen.
+
+**Nieuw proces**
+
+![img.png](images/NieuwprocesiO.png)
+
+Omschrijving nieuw proces:
+
+De medewerker komt naar kantoor en zoekt zijn collega. Indien de collega in de directe omgeving, bijvoorbeeld dezelfde ruimte, gevonden kan worden eindigt het proces. Mocht de collega niet gemakkelijk gevonden kunnen worden, gaat de medewerker in de Find my Colleague app kijken.
+Indien de collega data deelt met de app, kan de medewerker zien waar de collega is. Indien de collega op de aangegeven locatie zit, eindigt het proces. Mocht de collega geen data delen, of niet op de aangegeven locatie zijn, kan de medewerker de collega in de app pingen. Indien de collega hier op reageert kan duidelijk worden waar de collega is. Mocht de collega hier niet op reageren, dient er gebeld te worden.
+
+**Conclusie**
+
+In het oude proces diende er handmatig in de Outlook agenda gekeken te worden, en moest er vaak gebeld worden, gezien iemand niet altijd iets in de agenda heeft staan. In het nieuwe proces kan de medewerker in de app kijken en ziet direct waar de collega is, mits er data gedeeld is (combinatie van handmatige input, netwerkinformatie en agenda data). 
+Zoals te zien is in het proces, kan de app alleen succesvol werken wanneer veel medewerkers van het bedrijf data delen. Wanneer dit niet gebeurd, dient er nog altijd gebeld en gezocht te worden in het gebouw.
 
 ## Professional
 
