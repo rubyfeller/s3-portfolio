@@ -152,7 +152,7 @@ To do: **stukje toevoegen over onderzoek naar veiligheid JWT-tokens**
 Tot slot heb ik onderzoek gedaan naar hoe de kwaliteit in een gedistribueerde webapplicatie gewaarborgd kan worden middels testen. Hiervoor heb ik gebruik gemaakt van het [DOT-framework](https://ictresearchmethods.nl/The_DOT_Framework).
 
 [Onderzoek testen
-](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/research/Onderzoek%20testen.docx)
+](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/research/Onderzoek%20testen.pdf)
 
 Aan de hand van dit onderzoek heb ik mijn applicatie getest. Aangezien het in een gedistribueerde webapplicatie belangrijk is dat diverse modules/onderdelen met elkaar kunnen communiceren, heb ik gekozen voor integratietests.
 Om te valideren dat de applicatie voldoet aan de eisen heb ik tevens gebruik gemaakt van acceptatietests, in de vorm van endpoint-tests.
@@ -288,6 +288,16 @@ Daarnaast word SonarCloud getriggered om een code scan te maken. Op basis hierva
 
 [GitHub Package back-end
 ](https://github.com/rubyfeller/s3-ip-restapi)
+
+Ter informatie voor mensen die wellicht met de applicatie aan de slag willen heb ik deployment instructies geschreven voor zowel de [front-end](https://github.com/rubyfeller/s3-ip-frontend#deployment-instructions-docker) als de [back-end](https://github.com/rubyfeller/s3-ip-restapi#deployment-instructions).
+
+**Overzicht containers:**
+
+![img.png](images/DockerContainers.png)
+
+**Overzicht images:**
+
+![img.png](images/DockerImages.png)
 
 In het groepsproject heb ik gebruik gemaakt van Azure Pipelines, waar een Docker image gemaakt en gepushet word naar AWS ECR. Vanuit daar word een ECS instance aangemaakt, welke ervoor zorgt dat de applicatie draait op een EC2 server.
 In onderstaande afbeelding is de architectuurdiagram van het groepsproject te zien, met daarin het CI/CD proces:
