@@ -538,7 +538,6 @@ Dit ga ik verbeteren.
 Ook was bij het registreren op de Auth0-pagina niet helemaal duidelijk aan wie ze authorisatie gaven, dit komt echter omdat het een schoolproject is, waardoor er 'S3' staat.
 
 ## Business processes
-To do: **proces uittekenen en analyseren**
 
 Voor het leerdoel Business processes heb ik het oude proces en het nieuwe business process van onze stakeholder gemodelleerd. Met als doel het inzichtelijk maken van de toegevoegde waarde van de door ons gerealiseerde applicatie (nieuwe proces).
 
