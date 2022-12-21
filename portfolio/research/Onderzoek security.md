@@ -10,14 +10,14 @@ Onderstaande strategieën binnen het DOT-framework zullen worden toegepast:
 
 **Library**
 
-![img.png](Library.png)
+![img.png](images/Library.png)
 
 Ik kies voor de library-strategie om onderzoek te doen naar al bestaande richtlijnen en theorieën.
 Dit gezien er een grote hoeveelheid informatie beschikbaar is over het onderzoeksonderwerp.
 
 **Lab** 
 
-![img.png](Lab.png)
+![img.png](images/Lab.png)
 
 Om concepten te kunnen testen en valideren gebruik ik de lab-strategie. Zo kan achterhaald worden of iets werkt zoals verwacht.
 
