@@ -33,17 +33,17 @@ Een JWT-token bestaat uit:
 
 - Header
 
-Hierin word het type key omschreven omschreven (JWT) en het hashing algoritme, zoals RSA.
+Hierin word het type key omschreven (JWT) en het hashing algoritme, zoals RSA.
 
 - Payload
 
-Hierin staan waardes zoals permissies en rollen omschreven. De namen van de claims mogen maximaal 3 karakters bevatten om de JWT-token compact te houden.
+Hierin staan waardes zoals permissies en rollen omschreven. De namen van de claims mogen maximaal 3 karakters bevatten om de JWT compact te houden.
 
 - Signature
 
-De JWT-token word ondertekend om te bevestigen dat de persoon is wie hij zegt dat hij is, en om te bevestigen of de inhoud niet aangepast is.
+De JWT word ondertekend om te bevestigen dat de persoon is wie hij zegt dat hij is, en om te bevestigen of de inhoud niet aangepast is.
 
-In onderstaande afbeelding is een JWT-token uit mijn applicatie zichtbaar. De rode kleur bevat de header, de paarse kleur de payload en de blauwe kleur de signature.
+In onderstaande afbeelding is een JWT uit mijn applicatie zichtbaar. De rode kleur bevat de header, de paarse kleur de payload en de blauwe kleur de signature.
 
 ![img.png](../images/JWT-Token.png)
 
@@ -79,7 +79,7 @@ Dit betekend dat een andere applicatie geen requests naar de API kan maken.
 - XSS
 
 In de front-end van de applicatie heb ik geen mogelijkheid kunnen vinden voor het uitvoeren van een XSS-aanval. 
-Mocht dit wel gepoogd worden vangt de back-end (API) dit af, doordat er altijd gevalideerd word of de data overeenkomt met hetgeen dat verwacht word.
+Mocht dit wel geprobeerd worden vangt de back-end (API) dit af, doordat er altijd gevalideerd word of de data overeenkomt met hetgeen dat verwacht word.
 
 ### Waar kan de JWT-token het veiligst opgeslagen worden?
 De JWT-token wordt doorgaans opgeslagen in de localstorage, in een cookie, in een session of in-memory: allemaal client-side.
@@ -89,7 +89,7 @@ Zowel bij het opslaan in de localstorage, in-memory of in de cookies is de JWT-t
 Dit is echter niet direct een probleem als de applicatie beveiligd is tegen XSS en CSRF aanvallen. Wanneer de applicatie hier niet tegen beschermd is, ontstaan er wel problemen. Deze problemen beperken zich echter niet alleen tot de JWT-tokens, maar betreffen de gehele applicatie.
 
 ### Conclusie
-Aangezien het op de client-side altijd mogelijk is om bij de JWT-tokens te komen, kies ik ervoor om ze in de localstorage te zetten. Dit is de meest gebruiksvriendelijke manier, en ook op de andere locaties zijn er risico's.
+Aangezien het op de client-side altijd mogelijk is om bij de JWTs te komen, kies ik ervoor om ze in de localstorage te zetten. Dit is de meest gebruiksvriendelijke manier, en ook op de andere locaties zijn er risico's.
 Het blijft wel belangrijk om in de localstorage geen kwetsbare data als wachtwoorden op te slaan. Daarnaast kan er, mocht het mis gaan, slechts voor beperkte tijd misbruik gemaakt worden van de JWT-token aangezien deze slechts 1 uur geldig is. Topt slot dient de applicatie in zijn geheel beveiligd te zijn tegen XSS en CSRF aanvallen.
 
 **Bronnen**

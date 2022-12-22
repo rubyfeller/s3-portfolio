@@ -145,11 +145,8 @@ Gedurende het ontwikkelen van de applicatie zijn ook security notices naar boven
 
 Zoals in de afbeelding is te zien, word op dit moment ieder soort HTTP-request naar de applicatie toegestaan. Dit is niet veilig en dient aangepast te worden wanneer de applicatie naar productie gaat. SonarCloud zorgt er voor dat je dit niet vergeet.
 
-
-To do: **stukje toevoegen over onderzoek naar veiligheid JWT-tokens**
-
 #### Onderzoek 1
-Tot slot heb ik onderzoek gedaan naar hoe de kwaliteit in een gedistribueerde webapplicatie gewaarborgd kan worden middels testen. Hiervoor heb ik gebruik gemaakt van het [DOT-framework](https://ictresearchmethods.nl/The_DOT_Framework).
+Ook heb ik onderzoek gedaan naar hoe de kwaliteit in een gedistribueerde webapplicatie gewaarborgd kan worden middels testen. Hiervoor heb ik gebruik gemaakt van het [DOT-framework](https://ictresearchmethods.nl/The_DOT_Framework).
 
 [Onderzoek testen
 ](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/research/Onderzoek%20testen.pdf)
@@ -171,6 +168,12 @@ In onderstaande afbeelding is een voorbeeld van een acceptatietest te zien. Hier
 ![img.png](images/AcceptanceTestController.png)
 
 Zie voor front-end testen [Requirements and design](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#requirements-and-design).
+
+#### Onderzoek 2
+Tot slot heb ik een onderzoek gedaan naar waar je het beste een JWT op kunt slaan.
+
+[Security onderzoek opslaan JWTs
+](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/research/Onderzoek%20security.md#is-mijn-applicatie-kwetsbaar-voor-een-van-de-aanvallen)
 
 ## Agile
 ### Wat houdt Agile in?
@@ -262,7 +265,12 @@ Ook hebben we de taken beter geformuleerd en op advies van de productowners een 
 
 ![img.png](images/DevOpsTaskDoD.png)
 
-To do: **Insert screenshot burndown chart**
+De burndownchart word in Azure DevOps automatisch gegenereerd. We hebben hier naar gekeken om gemakkelijk te kunnen zien of we op schema liepen.
+
+![img.png](images/Burndown.png)
+
+Zoals in de bovenstaande burndown chart te zien is, hebben we in de loop van de sprint nog veel extra taken toegevoegd. Hierdoor gaat de burndown in het begin voornamelijk omhoog.
+Later hebben we taken afgerond en begint de burndown langzaam te dalen. Echter is de ideal trend aan het einde 0, en de daadwerlijke openstaande taken 9. Dit betekend dat we niet alles wat we gehoopt hadden af konden maken. Dit ging wel voornamelijk over afrondende taken.
 
 ## CI/CD
 Aan de repositories op GitHub heb ik 'Github Actions' toegevoegd: een tool om CI/CD toe te passen.
@@ -584,7 +592,11 @@ In het groepsproject hebben we elkaar aan het einde van de sprint peer feedback 
 
 Ook heb ik onderzoeken geschreven met gebruik van het DOT-framework, zie [Software Quality](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/portfolio.md#software-quality).
 
-To do: **reflecteren op proces en verschillen tussen GP en IP (scrum etc).**
+**Verschillen IP & GP**
+
+Het grootste verschil tussen het individueel project en groepsproject was de werkstructuur. In het groepsproject is gebruik gemaakt van de agile ontwikkelmethode Scrum. 
+In het eigen project is dit ook gebruikt, maar niet volledig gezien Scrum gericht is op kleine teams. Ik heb hier in het individueel project enkel de elementen uit gepakt die je zelf kan doen, zoals het bijhouden van een scrum-board met definition of done en dergelijke.
+Gedurende het groepsproject zijn er ook stand-ups, planning meetings en refinement sessions gehouden. Daarnaast hebben we meer gereflecteerd na iedere sprint.
 
 ## Reflectie
 To do: **reflectie op dit semester.**
