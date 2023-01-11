@@ -173,7 +173,7 @@ Zie voor front-end testen [Requirements and design](https://github.com/rubyfelle
 Tot slot heb ik een onderzoek gedaan naar waar je het beste een JWT op kunt slaan.
 
 [Security onderzoek opslaan JWTs
-](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/research/Onderzoek%20security.md#is-mijn-applicatie-kwetsbaar-voor-een-van-de-aanvallen)
+](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/research/Onderzoek%20security.md)
 
 ## Agile
 ### Wat houdt Agile in?
@@ -584,7 +584,8 @@ Zoals te zien is in het proces, kan de app alleen succesvol werken wanneer veel 
 
 ## Professional
 
-To do: **Insert FeedPulse screenshot / export**
+[Klik hier om de export van FeedPulse te openen voor de ontvangen feedback.
+](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/attachments/FeedPulse.pdf)
 
 In het groepsproject hebben we elkaar aan het einde van de sprint peer feedback gegeven:
 
