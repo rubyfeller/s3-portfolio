@@ -584,8 +584,11 @@ Zoals te zien is in het proces, kan de app alleen succesvol werken wanneer veel 
 
 ## Professional
 
-[Klik hier om de export van FeedPulse te openen voor de ontvangen feedback.
+[Klik hier om de export van FeedPulse te openen voor de ontvangen feedback (IP).
 ](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/attachments/FeedPulse.pdf)
+
+[Klik hier om de export van FeedPulse te openen voor de ontvangen feedback (GP).
+](https://github.com/rubyfeller/s3-portfolio/blob/main/portfolio/attachments/FeedPulse-group.pdf)
 
 In het groepsproject hebben we elkaar aan het einde van de sprint peer feedback gegeven:
 
@@ -600,4 +603,10 @@ In het eigen project is dit ook gebruikt, maar niet volledig gezien Scrum gerich
 Gedurende het groepsproject zijn er ook stand-ups, planning meetings en refinement sessions gehouden. Daarnaast hebben we meer gereflecteerd na iedere sprint.
 
 ## Reflectie
-To do: **reflectie op dit semester.**
+Dit semester heb ik veel kunnen leren aangezien ik voornamelijk gekozen heb om te werken met talen en libraries waar ik nog niet eerder mee gewerkt had. De front-end is gemaakt in React en de back-end in Java Spring Boot. Hier heb ik eerder niet mee gewerkt. Ook heb ik met betrekking tot GP erg veel geleerd over AWS en de diensten die daar binnen vallen, zoals DynamoDB en Amazon Cognito.
+Ook heb ik veel geleerd over authenticatie en authorisatie, code quality, testen en CI/CD. Tot slot heb ik geleerd hoe efficient te werken met Agile / Scrum. Dit kwam vooral doordat de stakeholders in het groepsproject veel geholpen hebben met de planning d.m.v. refinement sessies.
+
+Bij de start van het groepsproject had ik niet verwacht dat het project genoeg uitdaging zou geven. Uiteindelijk is gebleken dat het, ondanks dat het simpel leek, toch complex en uitdagend was. Hier ben ik blij mee.
+
+De volgende keer zou ik eerder mijn UX laten testen, om eerder vast te stellen of een bepaalde flow wel logisch is. Ook zou ik meer en eerder kijken naar de snelheid/performance van de applicatie. Ook zou ik in het groepsproject meer tests schrijven om directer te kunnen zien of een aanpassing een functionaliteit kapot maakt. Daarnaast zou ik met code-freezes willen werken, zodat er niet last minute nog stress ontstaat.
+Tot slot zou ik eerder mijn progressie delen met docenten aan de hand van dit portfolio, en onderzoeken direct te schrijven wanneer er sowieso al veel onderzocht moet worden.
